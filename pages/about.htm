@@ -4,294 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Abdul Rafay</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #2c3e50;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Navigation */
-        nav {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 15px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 0;
-            padding: 0;
-            flex-wrap: wrap;
-        }
-
-        nav ul li {
-            background: linear-gradient(45deg, #3498db, #2980b9);
-            border-radius: 25px;
-            padding: 12px 20px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-size: 16px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        nav ul li:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
-            background: linear-gradient(45deg, #2980b9, #3498db);
-        }
-
-        nav ul li.active {
-            background: linear-gradient(45deg, #e74c3c, #c0392b);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 120px 0 80px;
-            text-align: center;
-            color: #2c3e50;
-            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-            border-radius: 0 0 30px 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            text-shadow: none;
-            color: #2c3e50;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 40px;
-            color: #5a6c7d;
-            animation: fadeInUp 1s ease-out 0.2s both;
-        }
-
-        /* Content Sections */
-        .content-section {
-            background: white;
-            margin: 40px 0;
-            padding: 60px 0;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            color: #2c3e50;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(45deg, #3498db, #2980b9);
-            border-radius: 2px;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #5a6c7d;
-        }
-
-        .about-text p {
-            margin-bottom: 20px;
-        }
-
-        .about-image {
-            text-align: center;
-        }
-
-        .about-image img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .stat-card {
-            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .stat-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #3498db;
-            margin-bottom: 10px;
-        }
-
-        .stat-label {
-            color: #5a6c7d;
-            font-size: 1.1rem;
-        }
-
-        /* Footer */
-        footer {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-            color: white;
-            text-align: center;
-            padding: 30px 0;
-            margin-top: 60px;
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            nav ul {
-                gap: 10px;
-            }
-            
-            nav ul li {
-                padding: 8px 15px;
-            }
-            
-            nav ul li a {
-                font-size: 14px;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-            
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
         <div class="container">
             <ul>
-                <li><a href="index.htm">Home</a></li>
-                <li><a href="#" class="active">About</a></li>
-                <li><a href="skills.htm">Skills</a></li>
-                <li><a href="contact.htm">Contact</a></li>
-                <li><a href="experience.htm">Experience</a></li>
-                <li><a href="projects.htm">Projects</a></li>
-                <li><a href="gallery.htm">Gallery</a></li>
-                <li><a href="resume.htm">Resume</a></li>
+                <li><a href="index.htm"><span class="icon icon-home"></span>Home</a></li>
+                <li><a href="#" class="active"><span class="icon icon-about"></span>About</a></li>
+                <li><a href="skills.htm"><span class="icon icon-skills"></span>Skills</a></li>
+                <li><a href="contact.htm"><span class="icon icon-contact"></span>Contact</a></li>
+                <li><a href="experience.htm"><span class="icon icon-experience"></span>Experience</a></li>
+                <li><a href="projects.htm"><span class="icon icon-projects"></span>Projects</a></li>
+                <li><a href="gallery.htm"><span class="icon icon-gallery"></span>Gallery</a></li>
+                <li><a href="resume.htm"><span class="icon icon-resume"></span>Resume</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <div class="hero">
         <div class="container">
             <h1>About Me</h1>
             <p>Get to know the person behind the code</p>
         </div>
-    </section>
+    </div>
 
     <!-- About Content -->
-    <section class="content-section">
+    <div class="content-section">
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2 class="section-title" style="text-align: left; margin-bottom: 30px;">My Story</h2>
+                    <h2 class="section-title about-title">My Story</h2>
                     <p>
-                        Hello! I'm Abdul Rafay, a Computer Science student with a passion for full-stack development and creative design. 
+                        Hello! I'm Abdul Rafay, an Emerging Software Engineer with a passion for full-stack development and creative design. 
                         My journey in programming began during my university years when I discovered the power of turning ideas into reality through code.
                     </p>
                     <p>
-                        I specialize in modern web development using JavaScript, React, TypeScript, and Node.js, along with backend technologies 
-                        like Express and MongoDB. My approach combines technical expertise with creative problem-solving to deliver solutions 
-                        that are both functional and visually appealing.
+                        I specialize in modern web development using HTML, CSS, Tailwind CSS, JavaScript, React, TypeScript, and Node.js, along with backend technologies such as Express, MySQL, PHP, and MongoDB. My approach combines technical expertise with creative problem-solving to deliver solutions that are both functional and visually appealing.
                     </p>
                     <p>
-                        Beyond web development, I enjoy working with Java (Swing) for desktop applications, C/C++ for system programming, 
-                        and exploring creative fields like graphics design and video editing. I believe in continuous learning and staying updated 
-                        with the latest technologies and development practices.
+                        Beyond web development, I enjoy working with Java (Swing) for desktop applications and C/C++ for system programming. I’m also passionate about creative fields such as graphic design and video editing. I believe in continuous learning and staying updated with the latest technologies and development practices.
                     </p>
                     <p>
-                        My goal is to become a well-rounded software developer who can create innovative solutions across different platforms 
-                        and technologies, from web applications to desktop software and creative digital content.
+                        My goal is to become a well-rounded software developer capable of creating innovative solutions across various platforms and technologies — from web applications to desktop software and creative digital content.
                     </p>
                 </div>
                 <div class="about-image">
@@ -301,11 +57,11 @@
 
             <div class="stats-grid">
                 <div class="stat-card">
-                    <div class="stat-number">15+</div>
+                    <div class="stat-number">10+</div>
                     <div class="stat-label">Projects Completed</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">4</div>
+                    <div class="stat-number">3</div>
                     <div class="stat-label">Internships</div>
                 </div>
                 <div class="stat-card">
@@ -313,17 +69,17 @@
                     <div class="stat-label">Technologies Mastered</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">100%</div>
+                    <div class="stat-number">95%</div>
                     <div class="stat-label">Learning Enthusiasm</div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Abdul Rafay. All rights reserved.</p>
-            <p style="margin-top: 10px; opacity: 0.8;">Designed with ❤️ using HTML & CSS</p>
+            <p>&copy; 2025 Abdul Rafay. All rights reserved.</p>
+            <p class="footer-text">Designed with <span class="icon icon-heart"></span> using HTML & CSS</p>
         </div>
     </footer>
 </body>
