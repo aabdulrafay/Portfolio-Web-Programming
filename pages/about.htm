@@ -4,28 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Abdul Rafay</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="index.htm"><span class="icon icon-home"></span>Home</a></li>
-                <li><a href="#" class="active"><span class="icon icon-about"></span>About</a></li>
-                <li><a href="skills.htm"><span class="icon icon-skills"></span>Skills</a></li>
-                <li><a href="contact.htm"><span class="icon icon-contact"></span>Contact</a></li>
-                <li><a href="experience.htm"><span class="icon icon-experience"></span>Experience</a></li>
-                <li><a href="projects.htm"><span class="icon icon-projects"></span>Projects</a></li>
-                <li><a href="gallery.htm"><span class="icon icon-gallery"></span>Gallery</a></li>
-                <li><a href="resume.htm"><span class="icon icon-resume"></span>Resume</a></li>
-            </ul>
+    <header class="site-header" role="banner">
+        <div class="nav-container container">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
+            <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav class="site-nav" role="navigation" aria-label="Primary">
+                <a href="index.htm" class="nav-link"><span class="material-icons">home</span><span class="nav-text">Home</span></a>
+                <a href="about.htm" class="nav-link active"><span class="material-icons">person</span><span class="nav-text">About</span></a>
+                <a href="skills.htm" class="nav-link"><span class="material-icons">code</span><span class="nav-text">Skills</span></a>
+                <a href="experience.htm" class="nav-link"><span class="material-icons">work</span><span class="nav-text">Experience</span></a>
+                <a href="projects.htm" class="nav-link"><span class="material-icons">folder</span><span class="nav-text">Projects</span></a>
+                <a href="gallery.htm" class="nav-link"><span class="material-icons">photo_library</span><span class="nav-text">Gallery</span></a>
+                <a href="resume.htm" class="nav-link"><span class="material-icons">description</span><span class="nav-text">Resume</span></a>
+                <a href="contact.htm" class="nav-link"><span class="material-icons">mail</span><span class="nav-text">Contact</span></a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
-    <div class="hero">
+    <main id="main">
+    <div class="hero" role="region" aria-labelledby="about-title">
         <div class="container">
-            <h1>About Me</h1>
+            <h1 id="about-title">About Me</h1>
             <p>Get to know the person behind the code</p>
         </div>
     </div>
@@ -76,10 +84,11 @@
         </div>
     </div>
 
+    </main>
     <footer>
         <div class="container">
             <p>&copy; 2025 Abdul Rafay. All rights reserved.</p>
-            <p class="footer-text">Designed with <span class="icon icon-heart"></span> using HTML & CSS</p>
+            <p class="footer-text">Designed with <span class="material-icons" style="font-size: 16px; vertical-align: middle;">favorite</span> using HTML & CSS</p>
         </div>
     </footer>
 </body>

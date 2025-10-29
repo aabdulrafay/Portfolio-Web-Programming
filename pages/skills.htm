@@ -4,28 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills - Abdul Rafay</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="index.htm"><span class="icon icon-home"></span>Home</a></li>
-                <li><a href="about.htm"><span class="icon icon-about"></span>About</a></li>
-                <li><a href="#" class="active"><span class="icon icon-skills"></span>Skills</a></li>
-                <li><a href="contact.htm"><span class="icon icon-contact"></span>Contact</a></li>
-                <li><a href="experience.htm"><span class="icon icon-experience"></span>Experience</a></li>
-                <li><a href="projects.htm"><span class="icon icon-projects"></span>Projects</a></li>
-                <li><a href="gallery.htm"><span class="icon icon-gallery"></span>Gallery</a></li>
-                <li><a href="resume.htm"><span class="icon icon-resume"></span>Resume</a></li>
-            </ul>
+    <header class="site-header" role="banner">
+        <div class="nav-container container">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
+            <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav class="site-nav" role="navigation" aria-label="Primary">
+                <a href="index.htm" class="nav-link"><span class="material-icons">home</span><span class="nav-text">Home</span></a>
+                <a href="about.htm" class="nav-link"><span class="material-icons">person</span><span class="nav-text">About</span></a>
+                <a href="skills.htm" class="nav-link active"><span class="material-icons">code</span><span class="nav-text">Skills</span></a>
+                <a href="experience.htm" class="nav-link"><span class="material-icons">work</span><span class="nav-text">Experience</span></a>
+                <a href="projects.htm" class="nav-link"><span class="material-icons">folder</span><span class="nav-text">Projects</span></a>
+                <a href="gallery.htm" class="nav-link"><span class="material-icons">photo_library</span><span class="nav-text">Gallery</span></a>
+                <a href="resume.htm" class="nav-link"><span class="material-icons">description</span><span class="nav-text">Resume</span></a>
+                <a href="contact.htm" class="nav-link"><span class="material-icons">mail</span><span class="nav-text">Contact</span></a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
-    <div class="hero">
+    <main id="main">
+    <div class="hero" role="region" aria-labelledby="skills-title">
         <div class="container">
-            <h1>My Skills</h1>
+            <h1 id="skills-title">My Skills</h1>
             <p>Technologies and tools I work with</p>
         </div>
     </div>
@@ -48,40 +56,40 @@
                         <span class="skill-tag">CSS</span>
                     </div>
                     <div class="skill-level">
-                        <div class="skill-item">
+                        <div class="skill-item" id="skill-javascript">
                             <div class="skill-name">
                                 <span>JavaScript</span>
                                 <span>90%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress js"></div>
+                                <div class="skill-progress js" role="progressbar" aria-label="JavaScript proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90"></div>
                             </div>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" id="skill-react">
                             <div class="skill-name">
                                 <span>React</span>
                                 <span>85%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress react"></div>
+                                <div class="skill-progress react" role="progressbar" aria-label="React proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85"></div>
                             </div>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" id="skill-typescript">
                             <div class="skill-name">
                                 <span>TypeScript</span>
                                 <span>80%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress typescript"></div>
+                                <div class="skill-progress typescript" role="progressbar" aria-label="TypeScript proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80"></div>
                             </div>
                         </div>
-                        <div class="skill-item">
+        				<div class="skill-item" id="skill-nextjs">
                             <div class="skill-name">
                                 <span>Next.js</span>
                                 <span>75%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress nextjs"></div>
+                                <div class="skill-progress nextjs" role="progressbar" aria-label="Next.js proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="75"></div>
                             </div>
                         </div>
                     </div>
@@ -95,13 +103,13 @@
                         <span class="skill-tag">Flutter</span>
                     </div>
                      <div class="skill-level">
-                         <div class="skill-item">
+                         <div class="skill-item" id="skill-flutter">
                              <div class="skill-name">
                                  <span>Flutter</span>
                                  <span>75%</span>
                              </div>
                              <div class="skill-bar">
-                                 <div class="skill-progress flutter"></div>
+                                 <div class="skill-progress flutter" role="progressbar" aria-label="Flutter proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="75"></div>
                              </div>
                          </div>
                      </div>
@@ -120,49 +128,49 @@
                         <span class="skill-tag">API Integration</span>
                     </div>
                     <div class="skill-level">
-                        <div class="skill-item">
+                        <div class="skill-item" id="skill-node">
                             <div class="skill-name">
                                 <span>Node.js</span>
                                 <span>90%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress node"></div>
+                                <div class="skill-progress node" role="progressbar" aria-label="Node.js proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90"></div>
                             </div>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" id="skill-express">
                             <div class="skill-name">
                                 <span>Express</span>
                                 <span>85%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress express"></div>
+                                <div class="skill-progress express" role="progressbar" aria-label="Express proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85"></div>
                             </div>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" id="skill-mongodb">
                             <div class="skill-name">
                                 <span>MongoDB</span>
                                 <span>80%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress mongodb"></div>
+                                <div class="skill-progress mongodb" role="progressbar" aria-label="MongoDB proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80"></div>
                             </div>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" id="skill-php">
                              <div class="skill-name">
                                  <span>PHP</span>
                                  <span>85%</span>
                              </div>
                             <div class="skill-bar">
-                                <div class="skill-progress php"></div>
+                                <div class="skill-progress php" role="progressbar" aria-label="PHP proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85"></div>
                             </div>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" id="skill-mysql">
                             <div class="skill-name">
                                 <span>MySQL</span>
                                 <span>70%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress mysql"></div>
+                                <div class="skill-progress mysql" role="progressbar" aria-label="MySQL proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70"></div>
                             </div>
                         </div>
                     </div>
@@ -179,31 +187,31 @@
                         <span class="skill-tag">C#</span>
                     </div>
                     <div class="skill-level">
-                        <div class="skill-item">
+                        <div class="skill-item" id="skill-java">
                             <div class="skill-name">
                                 <span>Java (Swing)</span>
                                 <span>85%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress java"></div>
+                                <div class="skill-progress java" role="progressbar" aria-label="Java (Swing) proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85"></div>
                             </div>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" id="skill-cpp">
                             <div class="skill-name">
                                 <span>C/C++</span>
                                 <span>80%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress cpp"></div>
+                                <div class="skill-progress cpp" role="progressbar" aria-label="C and C++ proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80"></div>
                             </div>
                         </div>
-                            <div class="skill-item">
+                            <div class="skill-item" id="skill-csharp">
                                 <div class="skill-name">
                                     <span>C#</span>
                                     <span>50%</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress csharp"></div>
+                                    <div class="skill-progress csharp" role="progressbar" aria-label="C# proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></div>
                                 </div>
                             </div>
                         </div>
@@ -219,22 +227,22 @@
                         <span class="skill-tag">Logo Design</span>
                     </div>
                     <div class="skill-level">
-                        <div class="skill-item">
+                        <div class="skill-item" id="skill-graphics">
                             <div class="skill-name">
                                 <span>Graphics Design</span>
                                 <span>80%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress graphics"></div>
+                                <div class="skill-progress graphics" role="progressbar" aria-label="Graphics design proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80"></div>
                             </div>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" id="skill-video">
                             <div class="skill-name">
                                 <span>Video Editing</span>
                                 <span>75%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress video"></div>
+                                <div class="skill-progress video" role="progressbar" aria-label="Video editing proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="75"></div>
                             </div>
                         </div>
                     </div>
@@ -251,15 +259,13 @@
                         <span class="skill-tag">Version Control</span>
                     </div>
                     <div class="skill-level">
-                        <div class="skill-item">
-                        </div>
-                        <div class="skill-item">
+                        <div class="skill-item" id="skill-git">
                             <div class="skill-name">
                                 <span>Git</span>
                                 <span>90%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress git"></div>
+                                <div class="skill-progress git" role="progressbar" aria-label="Git proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90"></div>
                             </div>
                         </div>
                     </div>
@@ -282,10 +288,11 @@
         </div>
     </div>
 
+    </main>
     <footer>
         <div class="container">
             <p>&copy; 2025 Abdul Rafay. All rights reserved.</p>
-            <p class="footer-text">Designed with <span class="icon icon-heart"></span> using HTML & CSS</p>
+            <p class="footer-text">Designed with <span class="material-icons" style="font-size: 16px; vertical-align: middle;">favorite</span> using HTML & CSS</p>
         </div>
     </footer>
 </body>
